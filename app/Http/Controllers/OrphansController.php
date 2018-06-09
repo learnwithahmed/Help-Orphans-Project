@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Orphans;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class OrphansController extends Controller
@@ -80,11 +80,11 @@ class OrphansController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($request)
     {
         //Fetching Orphan Information
         $editOrphanById = Orphans::where('auth_user', Auth::id())
-            ->where('id', $id)
+            ->where('id', $request->id)
             ->first();
 
         $editOrphanById->name                  = $request->name;
