@@ -34,11 +34,24 @@ poverty, health care and any other possible help.
 
 ### Installation
 
-```sh
-git clone git@github.com:code2gether/Help-Orphans-Project.git
-cd Help-Orphans-Project
-yarn install OR npm install (you must choose one dont mix them)
-php artisan migrate
-php artisan serve
-enjoy ;)
+1. `git clone git@github.com:code2gether/Help-Orphans-Project.git`
+2. `cd Help-Orphans-Project`
+3. update the .env file along with database connection`
+4. `composer install && composer update`
+5. `php artisan migrate`
+
+#### Run PHP Dev Server
+
 ```
+php artisan serve
+```
+
+#### Run Node Engine
+
+Compile assets one time.
+
+```
+npm run dev
+```
+
+enjoy ;)
